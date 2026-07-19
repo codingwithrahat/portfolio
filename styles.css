@@ -716,6 +716,152 @@ h1 span {
   border: 1px solid rgba(0, 217, 255, 0.25);
 }
 
+.icpc-roadmap-wrap {
+  position: relative;
+}
+
+.icpc-roadmap-intro {
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+
+.icpc-roadmap {
+  position: relative;
+  display: grid;
+  gap: 1.1rem;
+  padding-left: 1.1rem;
+}
+
+.icpc-roadmap::before {
+  content: '';
+  position: absolute;
+  left: 0.32rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--neon), rgba(59, 130, 246, 0.7));
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.35);
+}
+
+.icpc-year-group {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.icpc-year-group::before {
+  content: '';
+  position: absolute;
+  left: -0.56rem;
+  top: 0.48rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--neon);
+  background: #071329;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.45);
+}
+
+.icpc-group-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(0, 217, 255, 0.12);
+  border: 1px solid rgba(0, 217, 255, 0.28);
+  color: var(--neon);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.7rem;
+}
+
+.icpc-year-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.icpc-node {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.icpc-node::before {
+  content: '';
+  position: absolute;
+  left: -0.99rem;
+  top: 0.8rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--neon);
+  background: #071329;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.45);
+}
+
+.icpc-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 72px;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(0, 217, 255, 0.12);
+  border: 1px solid rgba(0, 217, 255, 0.28);
+  color: var(--neon);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.icpc-node-card {
+  background: linear-gradient(140deg, rgba(0, 217, 255, 0.08), rgba(59, 130, 246, 0.08));
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 0.95rem 1rem;
+}
+
+.icpc-node-card.main-round {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(140deg, rgba(16, 185, 129, 0.12), rgba(59, 130, 246, 0.09));
+}
+
+.icpc-node-card h4 {
+  margin-bottom: 0.25rem;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.icpc-node-card p {
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.icpc-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 217, 255, 0.24);
+  background: rgba(0, 217, 255, 0.1);
+  color: var(--neon);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.icpc-status.main {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.12);
+  color: #7ef0c3;
+}
+
 .timeline {
   display: grid;
   gap: 1rem;
@@ -829,6 +975,19 @@ footer {
 
   .profile-links {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icpc-year-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .icpc-node {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .icpc-year {
+    min-width: 64px;
   }
 }
 
